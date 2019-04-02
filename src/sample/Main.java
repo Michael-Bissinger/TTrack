@@ -16,13 +16,17 @@ public class Main extends Application {
         //Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
         GridPane root = new GridPane();
-
+        
+        Label title = new Label("Track it!");
         Label mid = new Label("Mid:");
         Label eve = new Label("Eve");
-        
 
+        TextField midtime = new TextField();
+        TextField evetime = new TextField();
 
-        primaryStage.setTitle("Hello World");
+        root.add(title, 0, 1);
+
+        primaryStage.setTitle("TTrack");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
 
