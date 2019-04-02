@@ -15,19 +15,26 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         //Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
-        GridPane root = new GridPane();
-        
+        GridPane grid = new GridPane();
+
         Label title = new Label("Track it!");
         Label mid = new Label("Mid:");
         Label eve = new Label("Eve");
 
+        Button midstart = new Button("Start mid!");
+        Button evestart = new Button("Start eve!");
+
         TextField midtime = new TextField();
         TextField evetime = new TextField();
 
-        root.add(title, 0, 1);
+        Scene scene = new Scene(grid, 400, 400)
+
+        grid.add(midstart, 0, 1);
+
+
 
         primaryStage.setTitle("TTrack");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(scene);
         primaryStage.show();
 
 
