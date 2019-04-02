@@ -2,6 +2,7 @@ package sample;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -29,8 +30,19 @@ public class Main extends Application {
         TextField midtime = new TextField();
         TextField evetime = new TextField();
 
-        // Add to GridPane
+                Label border = new Label("-----------------");
+                Label notes = new Label("Notes:");
+                Label fivemin = new Label("5 Min = 300");
+                Label thirtymin = new Label("30 Min = 1800");
+
+
+        // GridPane settings
         GridPane grid = new GridPane();
+        grid.setHgap(10);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(0, 10, 0, 10));
+
+        // Add to GridPane
         grid.add(title, 0, 0);
         grid.add(mid, 0,1);
         grid.add(midtime, 1, 1);
@@ -38,6 +50,11 @@ public class Main extends Application {
         grid.add(eve,0,4);
         grid.add(evetime,1,4);
         grid.add(evestart,1,5);
+
+        grid.add(border,0,6);
+        grid.add(notes,0,7);
+        grid.add(fivemin,1,7);
+        grid.add(thirtymin,1,8);
 
         // Scene
         Scene scene = new Scene(grid, 400, 400);
