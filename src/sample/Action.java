@@ -8,8 +8,9 @@ public class Action {
 
                 waittime = 3; // just for testing
                 TimeUnit.SECONDS.sleep(waittime);
+                System.out.println("I waited");
 
-                
+
 
 
 

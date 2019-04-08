@@ -1,6 +1,8 @@
 package sample;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Parent;
@@ -11,6 +13,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+import java.awt.event.MouseEvent;
 
 
 public class Main extends Application {
@@ -24,16 +27,40 @@ public class Main extends Application {
         Label mid = new Label("Mid:");
         Label eve = new Label("Eve");
 
-        Button midstart = new Button("Start mid!");
-        Button evestart = new Button("Start eve!");
-
         TextField midtime = new TextField();
         TextField evetime = new TextField();
 
-                Label border = new Label("-----------------");
-                Label notes = new Label("Notes:");
-                Label fivemin = new Label("5 Min = 300");
-                Label thirtymin = new Label("30 Min = 1800");
+        Label border = new Label("-----------------");
+        Label notes = new Label("Notes:");
+        Label fivemin = new Label("5 Min = 300");
+        Label thirtymin = new Label("30 Min = 1800");
+
+        // Central buttons
+        Button midstart = new Button("Start mid!");
+        midstart.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    Action.start("mid", midtime.);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+
+        Button evestart = new Button("Start eve!");
+        evestart.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    Action.start("eve", 1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
 
 
         // GridPane settings
@@ -63,6 +90,9 @@ public class Main extends Application {
         primaryStage.setTitle("TTrack");
         primaryStage.setScene(scene);
         primaryStage.show();
+
+
+        // Mouse Event
 
 
 
