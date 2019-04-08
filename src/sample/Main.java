@@ -41,7 +41,9 @@ public class Main extends Application {
             @Override
             public void handle(ActionEvent event) {
                 try {
-                    Action.start("mid", midtime.);
+                    String waittime = (midtime.getText());
+                    int waittime_int = Integer.parseInt(waittime);
+                    Action.start("mid", waittime_int);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -54,7 +56,9 @@ public class Main extends Application {
             @Override
             public void handle(ActionEvent event) {
                 try {
-                    Action.start("eve", 1);
+                    String waittime = (midtime.getText());
+                    int waittime_int = Integer.parseInt(waittime);
+                    Action.start("eve", waittime_int);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
