@@ -1,18 +1,24 @@
 package sample;
 
+import java.awt.*;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class Action {
 
-        public static void start (String daytime, int waittime) throws InterruptedException, IOException {
+        public static void start (String daytime, int waittime) throws InterruptedException, IOException, AWTException {
 
                 //waittime = 3; // just for testing
                 TimeUnit.SECONDS.sleep(waittime);
                 System.out.println("I waited");
 
                 // Click button
-                // Scroll down
+                // Change cursor position
+                Robot bot = new Robot();
+                bot.mouseMove(100, 100);
+
+
+
                 // Click Button
 
 

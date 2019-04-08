@@ -13,7 +13,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.awt.event.MouseEvent;
+import java.io.IOException;
 
 
 public class Main extends Application {
@@ -44,7 +46,7 @@ public class Main extends Application {
                     String waittime = (midtime.getText());
                     int waittime_int = Integer.parseInt(waittime);
                     Action.start("mid", waittime_int);
-                } catch (InterruptedException e) {
+                } catch (InterruptedException | IOException | AWTException e) {
                     e.printStackTrace();
                 }
             }
@@ -59,7 +61,7 @@ public class Main extends Application {
                     String waittime = (midtime.getText());
                     int waittime_int = Integer.parseInt(waittime);
                     Action.start("eve", waittime_int);
-                } catch (InterruptedException e) {
+                } catch (InterruptedException | IOException | AWTException e) {
                     e.printStackTrace();
                 }
             }
