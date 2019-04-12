@@ -23,12 +23,13 @@ public class Action {
 
 
                 // Change cursor position
-
+                TimeUnit.SECONDS.sleep(1);
                 bot.mouseMove(2782, 764);
 
-
-
                 // Click Button
+                TimeUnit.SECONDS.sleep(1);
+                bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+                bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 
 
                 if (daytime.equals("eve")) {
