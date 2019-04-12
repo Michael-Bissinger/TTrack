@@ -37,6 +37,9 @@ public class Main extends Application {
         Label fivemin = new Label("5 Min = 300");
         Label thirtymin = new Label("30 Min = 1800");
 
+        Checkbox cbtestCheckbox = new Checkbox("Test");
+        cbtestCheckbox.setState(false);
+
         // Central buttons
         Button midstart = new Button("Start mid!");
         midstart.setOnAction(new EventHandler<ActionEvent>() {
@@ -84,10 +87,12 @@ public class Main extends Application {
         grid.add(evetime,1,4);
         grid.add(evestart,1,5);
 
-        grid.add(border,0,6);
-        grid.add(notes,0,7);
-        grid.add(fivemin,1,7);
-        grid.add(thirtymin,1,8);
+        grid.add(cbtestCheckbox,0,6);
+
+        grid.add(border,0,7);
+        grid.add(notes,0,8);
+        grid.add(fivemin,1,8);
+        grid.add(thirtymin,1,9);
 
         // Scene
         Scene scene = new Scene(grid, 400, 400);
