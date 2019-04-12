@@ -58,7 +58,7 @@ public class Main extends Application {
             @Override
             public void handle(ActionEvent event) {
                 try {
-                    String waittime = (midtime.getText());
+                    String waittime = (evetime.getText());
                     int waittime_int = Integer.parseInt(waittime);
                     Action.start("eve", waittime_int);
                 } catch (InterruptedException | IOException | AWTException e) {

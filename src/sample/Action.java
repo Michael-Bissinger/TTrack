@@ -1,6 +1,7 @@
 package sample;
 
 import java.awt.*;
+import java.awt.event.InputEvent;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
@@ -12,10 +13,18 @@ public class Action {
                 TimeUnit.SECONDS.sleep(waittime);
                 System.out.println("I waited");
 
-                // Click button
-                // Change cursor position
                 Robot bot = new Robot();
-                bot.mouseMove(100, 100);
+                // Click button (doubleclick)
+                bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+                bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+
+                bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+                bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+
+
+                // Change cursor position
+
+                bot.mouseMove(2782, 764);
 
 
 
