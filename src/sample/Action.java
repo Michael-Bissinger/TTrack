@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Action {
 
-        public static void start (String daytime, int waittime) throws InterruptedException, IOException, AWTException {
+        public static void start (String daytime, int waittime, String test) throws InterruptedException, IOException, AWTException {
 
                 //waittime = 3; // just for testing
                 TimeUnit.SECONDS.sleep(waittime);
@@ -15,11 +15,14 @@ public class Action {
 
                 Robot bot = new Robot();
                 // Click button (doubleclick)
-                bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-                bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+                if (!test.equals("test")) {
+                        bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+                        bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 
-                bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-                bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+                        bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+                        bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+                }
+
 
 
                 // Change cursor position
@@ -27,10 +30,11 @@ public class Action {
                 bot.mouseMove(2782, 764);
 
                 // Click Button
-                TimeUnit.SECONDS.sleep(1);
-                bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-                bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-
+                if (!test.equals("test")) {
+                        TimeUnit.SECONDS.sleep(1);
+                        bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+                        bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+                }
 
                 if (daytime.equals("eve")) {
                         // Shut down pc and end this program

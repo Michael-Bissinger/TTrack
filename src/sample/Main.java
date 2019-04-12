@@ -50,7 +50,8 @@ public class Main extends Application {
                 try {
                     String waittime = (midtime.getText());
                     int waittime_int = Integer.parseInt(waittime);
-                    Action.start("mid", waittime_int);
+                    String test = testfield.getText();
+                    Action.start("mid", waittime_int, test);
                 } catch (InterruptedException | IOException | AWTException e) {
                     e.printStackTrace();
                 }
@@ -65,7 +66,8 @@ public class Main extends Application {
                 try {
                     String waittime = (evetime.getText());
                     int waittime_int = Integer.parseInt(waittime);
-                    Action.start("eve", waittime_int);
+                    String test = testfield.getText();
+                    Action.start("eve", waittime_int, test);
                 } catch (InterruptedException | IOException | AWTException e) {
                     e.printStackTrace();
                 }
