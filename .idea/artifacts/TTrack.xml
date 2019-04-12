@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="TTrack">
+    <output-path>$PROJECT_DIR$/out/artifacts/TTrack</output-path>
+    <root id="root">
+      <element id="archive" name="TTrack.jar">
+        <element id="module-output" name="TTrack" />
+      </element>
+    </root>
+  </artifact>
+</component>
