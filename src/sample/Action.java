@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 public class Action {
 
         public static void start (String daytime, int waittime, String test) throws InterruptedException, IOException, AWTException {
-
+                System.out.println("Start!");
                 //waittime = 3; // just for testing
                 TimeUnit.SECONDS.sleep(waittime);
                 System.out.println("I waited");
@@ -36,8 +36,9 @@ public class Action {
                         bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
                 }
 
-                if (daytime.equals("eve")) {
+                if (daytime.equals("eve") && !test.equals("test")) {
                         // Shut down pc and end this program
+                        TimeUnit.SECONDS.sleep(5);
                         System.out.println("I am shutting down the pc");
                         String commandshut = "shutdown -s";
                         Process child = Runtime.getRuntime().exec(commandshut);
