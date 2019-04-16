@@ -39,6 +39,9 @@ public class Action {
                 if (daytime.equals("eve") && !test.equals("test")) {
                         // Shut down pc and end this program
                         TimeUnit.SECONDS.sleep(5);
+                        bot.mouseMove(10, 10);
+
+                        TimeUnit.SECONDS.sleep(5);
                         System.out.println("I am shutting down the pc");
                         String commandshut = "shutdown -s";
                         Process child = Runtime.getRuntime().exec(commandshut);
