@@ -40,6 +40,7 @@ public class Action {
                         // Shut down pc and end this program
                         TimeUnit.SECONDS.sleep(5);
                         bot.mouseMove(10, 10);
+                        bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
 
                         TimeUnit.SECONDS.sleep(5);
                         System.out.println("I am shutting down the pc");
