@@ -11,7 +11,7 @@ public class Action {
                 System.out.println("Start!");
                 //waittime = 3; // just for testing
                 TimeUnit.SECONDS.sleep(waittime);
-                System.out.println("I waited");
+                System.out.println("I waited" + ". Testing: " + test);
 
                 Robot bot = new Robot();
                 // Click button (doubleclick)
