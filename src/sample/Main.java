@@ -56,8 +56,11 @@ public class Main extends Application {
                 try {
                     String waittime = (midtime.getText());
                     int waittime_int = Integer.parseInt(waittime);
+                    int coordinatex = Integer.parseInt(xfield.getText());
+                    int coordinatey = Integer.parseInt(yfield.getText());
+
                     String test = testfield.getText();
-                    Action.start("mid", waittime_int, test);
+                    Action.start("mid", waittime_int, test, coordinatex, coordinatey);
                 } catch (InterruptedException | IOException | AWTException e) {
                     e.printStackTrace();
                 }
@@ -72,8 +75,11 @@ public class Main extends Application {
                 try {
                     String waittime = (evetime.getText());
                     int waittime_int = Integer.parseInt(waittime);
+                    int coordinatex = Integer.parseInt(xfield.getText());
+                    int coordinatey = Integer.parseInt(yfield.getText());
+
                     String test = testfield.getText();
-                    Action.start("eve", waittime_int, test);
+                    Action.start("eve", waittime_int, test, coordinatex, coordinatey);
                 } catch (InterruptedException | IOException | AWTException e) {
                     e.printStackTrace();
                 }
