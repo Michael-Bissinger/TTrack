@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Action {
 
-        public static void start (String daytime, int waittime, String test) throws InterruptedException, IOException, AWTException {
+        public static void start (String daytime, int waittime, String test, int coordinatex, int coordinatey) throws InterruptedException, IOException, AWTException {
                 System.out.println("Start!");
                 //waittime = 3; // just for testing
                 TimeUnit.SECONDS.sleep(waittime);
@@ -27,7 +27,8 @@ public class Action {
 
                 // Change cursor position
                 TimeUnit.SECONDS.sleep(1);
-                bot.mouseMove(2782, 764);
+                //bot.mouseMove(2782, 764); old version
+                bot.mouseMove(coordinatex, coordinatey);
 
                 // Click Button
                 if (!test.equals("test")) {

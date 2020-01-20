@@ -119,7 +119,7 @@ public class Main extends Application {
         grid.add(thirtymin,1,11);
 
         // Scene
-        Scene scene = new Scene(grid, 400, 400);
+        Scene scene = new Scene(grid, 400, 450);
 
         // Stage
         primaryStage.setTitle("TTrack");
