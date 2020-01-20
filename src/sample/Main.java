@@ -28,6 +28,8 @@ public class Main extends Application {
         Label title = new Label("Track it!");
         Label mid = new Label("Mid:");
         Label eve = new Label("Eve");
+        Label x_curve = new Label("X-Wert");
+        Label y_curve = new Label("Y-Wert");
 
         TextField midtime = new TextField();
         TextField evetime = new TextField();
@@ -94,12 +96,15 @@ public class Main extends Application {
         grid.add(lblTest,0,6);
         grid.add(testfield,1,6);
 
+        grid.add(x_curve, 0, 7); // X-Achse
+        grid.add(y_curve, 0, 8); // Y-Achse
+
         //grid.add(cbtestCheckbox,0,6);
 
-        grid.add(border,0,7);
-        grid.add(notes,0,8);
-        grid.add(fivemin,1,8);
-        grid.add(thirtymin,1,9);
+        grid.add(border,0,9);
+        grid.add(notes,0,10);
+        grid.add(fivemin,1,10);
+        grid.add(thirtymin,1,11);
 
         // Scene
         Scene scene = new Scene(grid, 400, 400);
