@@ -28,8 +28,8 @@ public class Main extends Application {
         Label title = new Label("Track it!");
         Label mid = new Label("Mid:");
         Label eve = new Label("Eve");
-        Label x_curve = new Label("X-Wert");
-        Label y_curve = new Label("Y-Wert");
+        Label x_curve = new Label("X-value");
+        Label y_curve = new Label("Y-value");
 
         TextField midtime = new TextField();
         TextField evetime = new TextField();
@@ -41,6 +41,10 @@ public class Main extends Application {
 
         Label lblTest = new Label("write test to do test");
         TextField testfield = new TextField();
+        TextField xfield = new TextField();
+        xfield.setText("2782");
+        TextField yfield = new TextField();
+        yfield.setText("764");
         //Checkbox cbtestCheckbox = new Checkbox("Test");
         //cbtestCheckbox.setState(false);
 
@@ -97,7 +101,9 @@ public class Main extends Application {
         grid.add(testfield,1,6);
 
         grid.add(x_curve, 0, 7); // X-Achse
+        grid.add(xfield, 1, 7); // X-Achse
         grid.add(y_curve, 0, 8); // Y-Achse
+        grid.add(yfield, 1, 8); // Y-Achse
 
         //grid.add(cbtestCheckbox,0,6);
 
