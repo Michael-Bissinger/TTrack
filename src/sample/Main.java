@@ -42,9 +42,9 @@ public class Main extends Application {
         Label lblTest = new Label("write test to do test");
         TextField testfield = new TextField();
         TextField xfield = new TextField();
-        xfield.setText("2782");
+        xfield.setText("782"); // old: 2782
         TextField yfield = new TextField();
-        yfield.setText("764");
+        yfield.setText("724"); // old: 764
         //Checkbox cbtestCheckbox = new Checkbox("Test");
         //cbtestCheckbox.setState(false);
 
